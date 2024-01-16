@@ -1,5 +1,14 @@
 <?php
 
-test('that true is true', function () {
-    expect(true)->toBeTrue();
-});
+// use function Pest\Laravel\assertDatabaseCount;
+// use App\Models\User;
+
+// beforeAll(function() {
+    
+//     User::factory()->create();
+// });
+
+
+// test('User table has 1 record', function () {
+//     assertDatabaseCount(User::class, 1);
+// });
