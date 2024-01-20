@@ -18,4 +18,10 @@ class Invoice extends Model
     public function lineItems(): HasMany {
         return $this->hasMany(LineItem::class);
     }
+
+    public function getTotalAttribute() {
+        return $this->lineItems->reduce(function($accum, $item) {
+            return $accum + $item->amount;
+        }, 0);
+    }
 }
